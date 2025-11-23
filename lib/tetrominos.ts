@@ -1,9 +1,9 @@
-export type TetrominoKey = 0 | "I" | "O" | "S" | "Z" | "J" | "L";
+export type TetrominoKey = 0 | "I" | "O" | "S" | "Z" | "J" | "L" | "T";
 
 export const TETROMINOS: Record<
   TetrominoKey,
   {
-    shape: (string | number)[][];
+    shape: TetrominoKey[][];
     color: number[];
   }
 > = {
@@ -57,9 +57,17 @@ export const TETROMINOS: Record<
       [0, "L", 0],
       [0, "L", "L"],
     ],
-    color: [255, 140, 30],
+    color: [255, 140, 30]
   },
-} as const;
+  T: {
+    shape: [
+      ["T", "T", "T"],
+      [0, "T", 0],
+      [0, 0, 0],
+    ],
+    color: [255, 140, 30]
+  }
+};
 
 export const randomTetromino = () => {
   const tetrominos = "IJLOSTZ";
