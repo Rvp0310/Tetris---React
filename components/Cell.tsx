@@ -11,4 +11,4 @@ const Cell = ({type}: {type: TetrominoKey}) => {
     );
 }
 
-export default Cell;
+export default React.memo(Cell);

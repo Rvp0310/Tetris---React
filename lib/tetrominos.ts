@@ -18,14 +18,14 @@ export const TETROMINOS: Record<
       [0, "I", 0, 0],
       [0, "I", 0, 0],
     ],
-    color: [0, 210, 255],
+    color: [  0, 255, 255],
   },
   O: {
     shape: [
       ["O", "O"],
       ["O", "O"],
     ],
-    color: [255, 225, 40],
+    color: [255, 220,  90],
   },
   S: {
     shape: [
@@ -33,7 +33,7 @@ export const TETROMINOS: Record<
       ["S", "S", 0],
       [0, 0, 0],
     ],
-    color: [80, 220, 120],
+    color: [ 50, 230, 140],
   },
   Z: {
     shape: [
@@ -41,7 +41,7 @@ export const TETROMINOS: Record<
       [0, "Z", "Z"],
       [0, 0, 0],
     ],
-    color: [235, 70, 95],
+    color: [255,  80, 120],
   },
   J: {
     shape: [
@@ -49,7 +49,7 @@ export const TETROMINOS: Record<
       [0, "J", 0],
       ["J", "J", 0],
     ],
-    color: [60, 120, 255],
+    color: [ 90, 140, 255],
   },
   L: {
     shape: [
@@ -57,7 +57,7 @@ export const TETROMINOS: Record<
       [0, "L", 0],
       [0, "L", "L"],
     ],
-    color: [255, 140, 30]
+    color: [255, 165,  60]
   },
   T: {
     shape: [
@@ -65,7 +65,7 @@ export const TETROMINOS: Record<
       [0, "T", 0],
       [0, 0, 0],
     ],
-    color: [255, 140, 30]
+    color: [200, 100, 255]
   }
 };
 
