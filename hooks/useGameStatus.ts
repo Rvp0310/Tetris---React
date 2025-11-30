@@ -10,7 +10,7 @@ export const useGameStatus = (rowsCleared: number): [number, number, number, Dis
     useEffect (() => {
         if(rowsCleared > 0){
             rowsCleared = rowsCleared / 2;  // because the row cleared is double in development mode
-            setScore(prev => prev + linePoints[rowsCleared - 1] * (level + 1));
+            setScore(prev => prev + linePoints[rowsCleared - 1] * level);
             setRows(prev => prev + rowsCleared);  
         }
     },[rowsCleared]);
