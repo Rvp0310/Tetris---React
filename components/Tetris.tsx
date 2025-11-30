@@ -21,10 +21,11 @@ const Tetris = () => {
     const stageRef = useRef<HTMLDivElement | null>(null);
     const [dropTime, setDropTime] = useState<number | null>(null);
     const [gameOver, setGameOver] = useState(false);
+    const [isVis, setIsVis] = useState(false);
 
     const [player, updatePlayerPos, resetPlayer, rotatePlayer] = usePlayer();
     const [stage, setStage, rowsCleared] = useStage(player, resetPlayer);
-    const [score, rows, level, setLevel] = useGameStatus(rowsCleared);
+    const [score, rows, level, setLevel, resetAll] = useGameStatus(rowsCleared);
 
     const movePlayer = (dir : number) => {
         if(!isCollision(player, stage, {moveX: dir, moveY: 0})){
@@ -40,6 +41,7 @@ const Tetris = () => {
         stageRef.current?.focus();
         setStage(stageMaker());
         resetPlayer();
+        resetAll();
     }
 
     const drop = () => {
@@ -100,6 +102,11 @@ const Tetris = () => {
                     }
                     <StartButton callback = {startGame}/>
                 </aside>
+                <button className='HowToPlay' onClick={() => setIsVis(true)}></button>
+                {isVis && <dialog style={{width: '500px', height: '300px'}} open>
+                    <button className="close" style={{width: '50px', height: '50px', position: 'absolute', right: 0, top: 0}} onClick={()=>setIsVis(false)}></button>
+                    <img src={'/images/How To Play.png'} style={{width: '500px', height: '300px'}}/>
+                </dialog>}
         </div>
     );
 }

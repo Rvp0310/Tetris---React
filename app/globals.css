@@ -64,3 +64,18 @@ aside{
     font-size: 1rem;
     outline: none;
 }
+
+.HowToPlay{
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    background-image: url('../public/images/question.png');
+    background-position: center ;
+    background-size: cover;
+}
+
+.close{
+    background-image: url('../public/images/close.png');
+    background-position: center ;
+    background-size: cover;
+}

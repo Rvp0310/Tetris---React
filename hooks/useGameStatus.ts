@@ -1,6 +1,6 @@
 import { useState, useEffect, useCallback, Dispatch, SetStateAction } from "react";
 
-export const useGameStatus = (rowsCleared: number): [number, number, number, Dispatch<SetStateAction<number>>] => {
+export const useGameStatus = (rowsCleared: number): [number, number, number, Dispatch<SetStateAction<number>>, () => void] => {
     const [score, setScore] = useState(0);
     const [rows, setRows] = useState(0);
     const [level, setLevel] = useState(0);
@@ -15,5 +15,11 @@ export const useGameStatus = (rowsCleared: number): [number, number, number, Dis
         }
     },[rowsCleared]);
 
-    return [score, rows, level, setLevel];
+    const resetAll = () => {
+        setScore(0);
+        setRows(0);
+        setLevel(1);
+    }
+
+    return [score, rows, level, setLevel, resetAll];
 }
