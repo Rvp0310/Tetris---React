@@ -56,3 +56,6 @@ These features will be added in future versions:
 - Modular components and hook-based architecture
 
 ---
+
+## Desktop Web Preview: 
+![Tetris Preview](./public/Tetris.gif)
