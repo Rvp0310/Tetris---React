@@ -8,6 +8,11 @@ The current version represents the MVP, following a React-based Tetris tutorial 
 
 ---
 
+## Desktop Web Preview: 
+![Tetris Preview](./public/Tetris.gif)
+
+---
+
 ## Current Features
 
 - Classic falling tetromino logic  
@@ -56,6 +61,3 @@ These features will be added in future versions:
 - Modular components and hook-based architecture
 
 ---
-
-## Desktop Web Preview: 
-![Tetris Preview](./public/Tetris.gif)
